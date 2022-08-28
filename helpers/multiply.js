@@ -1,10 +1,10 @@
 /** @format */
 const fs = require('fs'); // "fs" is from File System. And "require" is the way to import packages in node.
 
-const createFile = async (number = 1) => {
+const createFile = async (number = 1, toList = true) => {
 	try {
 		// If everything goes well
-		console.log(`====================\n Table of: ${number}\n====================`);
+		if (toList) console.log(`====================\n Table of: ${number}\n====================`);
 
 		let output = '';
 
@@ -12,7 +12,7 @@ const createFile = async (number = 1) => {
 			output += `${number} x ${i} = ${number * i}\n`;
 		}
 
-		console.log(output);
+		if (toList) console.log(output);
 
 		fs.writeFileSync(`tabla-${number}.txt`, output);
 		// First parameter the name of the file. Second the content of the file.
