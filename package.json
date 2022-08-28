@@ -1,0 +1,32 @@
+{
+	"name": "multiplication-tables",
+	"version": "1.0.0",
+	"description": "Program to create multiple tables in txt",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"multiply": "node app --base=3"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/diegopagini/Console_Node.git"
+	},
+	"keywords": [
+		"multiplication",
+		"multiply",
+		"tables"
+	],
+	"author": "Diego Pagini",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/diegopagini/Console_Node/issues"
+	},
+	"homepage": "https://github.com/diegopagini/Console_Node#readme",
+	"dependencies": {
+		"colors": "^1.4.0",
+		"yargs": "^17.5.1"
+	},
+	"devDependencies": {
+		"nodemon": "^2.0.19"
+	}
+}
