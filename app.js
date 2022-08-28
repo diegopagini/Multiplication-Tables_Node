@@ -4,20 +4,21 @@ const fs = require('fs'); // "fs" is from File System. And "require" is the way 
 
 console.clear(); // To clear the console.
 
-// console.log('====================');
-// console.log('   Tabla del: 5');
-// console.log('====================');
-
-const base = 5;
+const base = 3;
+console.log('====================');
+console.log(`Tabla del: ${base}`);
+console.log('====================');
 let salida = '';
 
 for (let i = 1; i <= 10; i++) {
 	salida += `${base} x ${i} = ${base * i}\n`;
 }
 
-fs.writeFileSync('tabla-5.txt', salida, (err) => {
+console.log(salida);
+
+fs.writeFileSync(`tabla-${base}.txt`, salida, (err) => {
+	// First parameter the name of the file. Second the content of the file. Third the error.
 	// fs.writeFileSync to create a file
 	if (err) throw err;
-
-	console.log('tabla-5.txt creado');
+	console.log(`tabla-${base}.txt creado`);
 });
