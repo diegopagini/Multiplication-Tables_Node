@@ -2,6 +2,7 @@
 
 const { createFile } = require('./helpers/multiply'); // Require is like the import in Javascript for Node.
 const argv = require('./config/yargs');
+require('colors');
 
 console.clear(); // To clear the console.
 
@@ -19,5 +20,5 @@ console.clear(); // To clear the console.
 const { base, toList } = argv;
 
 createFile(base, toList)
-	.then((fileName) => console.log(`${fileName} created`))
+	.then((fileName) => console.log(`${fileName.rainbow} created`))
 	.catch((err) => console.log(err));
