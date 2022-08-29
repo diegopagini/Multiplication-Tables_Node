@@ -2,7 +2,7 @@
 const fs = require('fs'); // "fs" is from File System. And "require" is the way to import packages in node.
 const colors = require('colors');
 
-const createFile = async (number = 1, toList = true) => {
+const createFile = async (number = 1, toList = true, length = 10) => {
 	try {
 		// If everything goes well
 		if (toList)
@@ -13,12 +13,14 @@ const createFile = async (number = 1, toList = true) => {
 			);
 
 		let output = '';
+		let view = '';
 
-		for (let i = 1; i <= 10; i++) {
-			output += `${number} ${colors.blue('x')} ${i} ${colors.red('=')} ${number * i}\n`;
+		for (let i = 1; i <= length; i++) {
+			view += `${number} ${colors.blue('x')} ${i} ${colors.red('=')} ${number * i}\n`; // To show the output with colors in the console
+			output += `${number} x ${i} = ${number * i}\n`; // To create the file without colors
 		}
 
-		if (toList) console.log(output);
+		if (toList) console.log(view);
 
 		fs.writeFileSync(`tabla-${number}.txt`, output);
 		// First parameter the name of the file. Second the content of the file.

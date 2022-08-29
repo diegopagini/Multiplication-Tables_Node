@@ -17,8 +17,8 @@ console.clear(); // To clear the console.
  * The corret way to get info from the console with yargs.
  */
 
-const { base, toList } = argv;
+const { base, toList, length } = argv;
 
-createFile(base, toList)
+createFile(base, toList, length)
 	.then((fileName) => console.log(`${fileName.rainbow} created`))
 	.catch((err) => console.log(err));

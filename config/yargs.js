@@ -9,6 +9,13 @@ const argv = require('yargs')
 		describe: 'basis for the multiplication table',
 	})
 	.option('l', {
+		alias: 'length',
+		type: 'number',
+		demandOption: false,
+		default: 10,
+		describe: 'length of the table',
+	})
+	.option('t', {
 		alias: 'toList',
 		type: 'boolean',
 		demandOption: false,
